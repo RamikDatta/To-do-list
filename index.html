@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>To-Do List</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>To-Do List</h1>
+    <input type="text" id="taskInput" placeholder="Enter your task">
+    <input type="date" id="dueDateInput">
+    <select id="categorySelect">
+      <option value="">Select a category</option>
+      <option value="work">Work</option>
+      <option value="personal">Personal</option>
+      <option value="shopping">Shopping</option>
+      <!-- Add more predefined categories as needed -->
+    </select>
+    <select id="prioritySelect">
+      <option value="">Select a priority</option>
+      <option value="low">Low</option>
+      <option value="medium">Medium</option>
+      <option value="high">High</option>
+    </select>
+    <button onclick="addTask()">Add</button>
+    <div class="filters">
+      <h2>Filters</h2>
+      <input type="date" id="dueDateFilter" placeholder="Due Date">
+      <select id="categoryFilter">
+        <option value="">Select a category</option>
+        <option value="work">Work</option>
+        <option value="personal">Personal</option>
+        <option value="shopping">Shopping</option>
+        <!-- Add more predefined categories as needed -->
+      </select>
+      <select id="priorityFilter">
+        <option value="">Select a priority</option>
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+      <button onclick="applyFilters()">Filter</button>
+      <button onclick="resetFilters()">Reset</button>
+      <button onclick="toggleViewBacklogs()">View Backlogs</button>
+    </div>
+    <div class="sort-buttons">
+      <h2>Sort By</h2>
+      <button id="sortByDueDate">Due Date</button>
+      <button id="sortByPriority">Priority</button>
+      <button id="sortByText">Task Text</button>
+    </div>
+    <ul id="taskList">
+    </ul>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
